@@ -1,6 +1,7 @@
 import { DateTime } from '../node_modules/luxon/src/luxon.js';
-/* eslint-disable import/prefer-default-export */
-export const setdate = () => {
+
+const setdate = () => {
   const curDate = document.getElementById('now');
   curDate.textContent = DateTime.now().toFormat('MMMM dd, yyyy HH:mm');
 };
+export default setdate;
