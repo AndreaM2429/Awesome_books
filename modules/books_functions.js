@@ -1,5 +1,5 @@
-import { addBook } from './add_book.js';
-import { removeBook } from './remove_book.js';
+import addBook from './add_book.js';
+import removeBook from './remove_book.js';
 
 const addone = addBook;
 const removeone = removeBook;
