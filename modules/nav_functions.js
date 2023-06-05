@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-export const configNavItems = () => {
+const configNavItems = () => {
   const sections = document.querySelectorAll('section');
   const navItems = document.querySelectorAll('.btn--nav');
 
@@ -19,3 +18,4 @@ export const configNavItems = () => {
     });
   });
 };
+export default configNavItems;
