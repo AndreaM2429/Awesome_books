@@ -36,9 +36,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Awesome Library] <a name="about-project"></a>
+# 📖 Awesome Library <a name="about-project"></a>
 
-**[Awesome Library]** is the project to save the data of every book in local storage of browser using ES6.
+**Awesome Library** is the project to save the data of every book in local storage of browser using ES6.
+
+**Note:** this is a copy from the repo that I contributed. [Here](https://github.com/M-Anwar-Hussaini/Awesome-Library) is the link to the repo where you can see my contributions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
