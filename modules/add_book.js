@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-export const addBook = (booklist, save, load) => {
+const addBook = (booklist, save, load) => {
   const bookTitle = document.querySelector('#book-title');
   const bookAuthor = document.querySelector('#book-author');
 
@@ -15,3 +14,4 @@ export const addBook = (booklist, save, load) => {
   bookTitle.value = '';
   bookAuthor.value = '';
 };
+export default addBook;
