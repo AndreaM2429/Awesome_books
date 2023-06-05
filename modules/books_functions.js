@@ -19,29 +19,11 @@ export default class Store {
     this.stroageName = 'library';
     this.loadBook();
     this.diplayBooks();
-    this.configNavItems();
   }
 
   add = () => {
     addone(this.bookList, this.saveBook, this.loadBook);
   }
-
-  /* addBook() {
-    const bookTitle = document.querySelector('#book-title');
-    const bookAuthor = document.querySelector('#book-author');
-
-    const book = {
-      bookTitle: bookTitle.value,
-      bookAuthor: bookAuthor.value,
-    };
-
-    this.bookList.push(book);
-    this.saveBook();
-    this.loadBook();
-
-    bookTitle.value = '';
-    bookAuthor.value = '';
-  } */
 
   diplayBooks = () => {
     const bookContainer = document.querySelector('.container--book');
@@ -83,12 +65,6 @@ export default class Store {
     bookContainer.appendChild(bookul);
   }
 
-  /* removeBook(index) {
-    this.bookList.splice(index, 1);
-    this.saveBook();
-    this.loadBook();
-  } */
-
   remove = (index) => {
     removeone(this.bookList, index, this.saveBook, this.loadBook);
   }
@@ -104,32 +80,4 @@ export default class Store {
   saveBook = () => {
     localStorage.setItem(this.stroageName, JSON.stringify(this.bookList));
   }
-
-  // eslint-disable-next-line class-methods-use-this
-  configNavItems() {
-    const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('.btn--nav');
-
-    navItems.forEach((curBtn, index) => {
-      curBtn.addEventListener('click', () => {
-        for (let i = 0; i < sections.length; i += 1) {
-          if (i === index) {
-            sections[i].classList.remove('d-none');
-            navItems[i].classList.add('btn-success');
-            navItems[i].classList.remove('btn-light');
-          } else {
-            sections[i].classList.add('d-none');
-            navItems[i].classList.remove('btn-success');
-            navItems[i].classList.add('btn-light');
-          }
-        }
-      });
-    });
-  }
 }
-
-// Store.init();
-
-const nowEl = document.getElementById('now');
-const nowDate = new Date();
-nowEl.textContent = nowDate;
