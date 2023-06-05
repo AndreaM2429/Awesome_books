@@ -1,6 +1,8 @@
 import { addBook } from './add_book.js';
+import { removeBook } from './remove_book.js';
 
 const addone = addBook;
+const removeone = removeBook;
 export default class Store {
   static init() {
     const store = new Store();
@@ -41,7 +43,7 @@ export default class Store {
     bookAuthor.value = '';
   } */
 
-  diplayBooks() {
+  diplayBooks = () => {
     const bookContainer = document.querySelector('.container--book');
     const bookul = document.createElement('ul');
     bookContainer.innerHTML = '';
@@ -74,17 +76,21 @@ export default class Store {
       book.appendChild(buttonDiv);
 
       removeButton.addEventListener('click', () => {
-        this.removeBook(index);
+        this.remove(index);
       });
       bookul.appendChild(book);
     });
     bookContainer.appendChild(bookul);
   }
 
-  removeBook(index) {
+  /* removeBook(index) {
     this.bookList.splice(index, 1);
     this.saveBook();
     this.loadBook();
+  } */
+
+  remove = (index) => {
+    removeone(this.bookList, index, this.saveBook, this.loadBook);
   }
 
   loadBook = () => {
