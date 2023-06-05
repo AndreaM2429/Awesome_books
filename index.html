@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Books</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="p-0 p-sm-1 p-md-2 p-lg-3 min-vh-100 d-flex flex-column bg-secondary-subtle">
+    <header class="header container bg-primary p-3">
+      <h1 class="h1 text-center text-light fs-1">Awsome Books</h1>
+      <!-- Navigation Bar -->
+      <div class="container">
+        <div class="row row-cols-1 g-2 row-cols-sm-3 bg-danger-subtle align-items-center p-3">
+          <div class="col-12 d-none d-md-block col-md-6">
+            <p class="mb-0 fs-4 align-self-center">Awsome Book</p>
+          </div>
+          <div class="col-12 col-md-2">
+            <button title="booklist" class="btn btn-success w-100 btn--nav">List</button>
+          </div>
+          <div class="col-12 col-md-2">
+            <button title="addbook" class="btn btn-light w-100 btn--nav">Add New</button>
+          </div>
+          <div class="col-12 col-md-2">
+            <button title="contact" class="btn btn-light w-100 btn--nav">Contact</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="bg-secondary-subtle container">
+      <div class="container text-end" id="now">Date</div>
+      <!-- SECTION BOOK LIST -->
+      <section id="booklist" class="container p-3">
+        <h2 class="h4">List of all books</h2>
+        <!-- Container of all books -->
+        <div class="container container--book">
+            <ul class="book-list"></ul>
+        </div>
+      </section>
+      <!-- SECTION  ADD BOOK -->
+      <section id="addbook" class="container p-5 align-items-end d-none">
+        <form class="row">
+          <h4 class="h4 text-center mb-3 col-12">Add a new book:</h4>
+          <div class="d-none d-md-block col-2"></div>
+          <div class="col d-flex flex-column gap-3 align-items-center">
+            <input required type="text" id="book-title" placeholder="Book Title" class="form-control"/>
+            <input type="text" required id="book-author" placeholder="Book Author" class="form-control"/>
+            <button id="add-book" class="btn btn-success align-self-end w-50">Add</button>
+          </div>
+          <div class="d-none d-md-block col-2"></div>
+        </form>
+      </section>
+      <!-- SECTION CONTACCT -->
+      <section id="contact" class="d-none">
+        <div class="container pt-3 pb-3 bg-secondary-subtle text-center">
+          <h2>Contact Information</h2>
+          <p>Do you have any questions or you just want to say hello? you can reach out to us!</p>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Our Eamil: </strong> andreamanuel2207@gmail.com</li>
+            <li class="list-group-item"><strong>Our Phone number: </strong> +52 553 045 5291</li>
+            <li class="list-group-item">
+              <strong>Our Address: </strong> Cueyamil: 2 Lago mayor, Mexico
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="container p-2 mt-auto border-top border-secondary border-3">
+      <p class="container">All rights resereved.</p>
+    </footer>
+  </body>
+  <script type="module" src="index.js"></script>
+</html>
